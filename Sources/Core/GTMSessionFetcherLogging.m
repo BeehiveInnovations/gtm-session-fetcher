@@ -20,7 +20,11 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+#if XCFRAMEWORK
+#import "GTMSessionFetcherLogging.h"
+#else
 #import "GTMSessionFetcher/GTMSessionFetcherLogging.h"
+#endif
 
 #ifndef STRIP_GTM_FETCH_LOGGING
 #error GTMSessionFetcher headers should have defaulted this if it wasn't already defined.

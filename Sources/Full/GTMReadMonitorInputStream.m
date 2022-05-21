@@ -17,7 +17,11 @@
 #error "This file requires ARC support."
 #endif
 
+#if XCFRAMEWORK
+#import "GTMReadMonitorInputStream.h"
+#else
 #import "GTMSessionFetcher/GTMReadMonitorInputStream.h"
+#endif
 
 @implementation GTMReadMonitorInputStream {
   NSInputStream *_inputStream;  // Encapsulated stream that does the work.

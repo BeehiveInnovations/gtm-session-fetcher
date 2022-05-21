@@ -17,7 +17,11 @@
 #error "This file requires ARC support."
 #endif
 
+#if XCFRAMEWORK
+#import "GTMSessionFetcherService.h"
+#else
 #import "GTMSessionFetcher/GTMSessionFetcherService.h"
+#endif
 
 NSString *const kGTMSessionFetcherServiceSessionBecameInvalidNotification =
     @"kGTMSessionFetcherServiceSessionBecameInvalidNotification";

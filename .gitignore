@@ -33,3 +33,5 @@ Podfile.lock
 
 # CocoaPods generate
 gen/
+/GTMSessionFetcher.xcframework/
+/archives/

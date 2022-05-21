@@ -13,7 +13,11 @@
  * limitations under the License.
  */
 
-#import "GTMSessionFetcher/GTMSessionFetcher.h"
+#if XCFRAMEWORK
+#import "GTMSessionFetcher.h"
+#else
+#import "Public/GTMSessionFetcher/GTMSessionFetcher.h"
+#endif
 
 // GTM HTTP Logging
 //

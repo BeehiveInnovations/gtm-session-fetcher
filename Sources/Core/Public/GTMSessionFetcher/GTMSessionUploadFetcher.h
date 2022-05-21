@@ -37,8 +37,13 @@
 // only be used from the main thread until further work is done to make this subclass
 // thread-safe.
 
+#if XCFRAMEWORK
+#import "GTMSessionFetcher.h"
+#import "GTMSessionFetcherService.h"
+#else
 #import "GTMSessionFetcher/GTMSessionFetcher.h"
 #import "GTMSessionFetcher/GTMSessionFetcherService.h"
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

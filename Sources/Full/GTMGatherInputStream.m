@@ -17,7 +17,11 @@
 #error "This file requires ARC support."
 #endif
 
+#if XCFRAMEWORK
+#import "GTMGatherInputStream.h"
+#else
 #import "GTMSessionFetcher/GTMGatherInputStream.h"
+#endif
 
 @implementation GTMGatherInputStream {
   NSArray *_dataArray;     // NSDatas that should be "gathered" and streamed.

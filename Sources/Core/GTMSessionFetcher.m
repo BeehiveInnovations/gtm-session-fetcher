@@ -17,7 +17,12 @@
 #error "This file requires ARC support."
 #endif
 
+#if XCFRAMEWORK
+#import "GTMSessionFetcher.h"
+#else
 #import "GTMSessionFetcher/GTMSessionFetcher.h"
+#endif
+
 #if TARGET_OS_OSX && GTMSESSION_RECONNECT_BACKGROUND_SESSIONS_ON_LAUNCH
 // To reconnect background sessions on Mac outside +load requires importing and linking
 // AppKit to access the NSApplicationDidFinishLaunching symbol.
