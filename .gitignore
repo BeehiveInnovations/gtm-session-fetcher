@@ -35,3 +35,4 @@ Podfile.lock
 gen/
 /GTMSessionFetcher.xcframework/
 /archives/
+/.DerivedData
